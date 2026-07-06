@@ -17,12 +17,6 @@ bash infer.sh pastis
 bash infer.sh agri --limit 40
 ```
 
-已验证:
-| 网络 | mIoU (全 val) |
-|---|---|
-| pastis | 58.29 (≈v4 记录 58.31) |
-| agri | ~89.6 |
-
 ## 结构
 
 ```
@@ -61,6 +55,6 @@ mmseg_dino_infer/
 
 ## 依赖
 
-- `dinov3` 包 (自动从 mmseg_dino_v2 项目加载, 不复制)
+- `dinov3` 包 (自动从 mmseg_dino_v2 项目加载, 不复制，可以在infer.py中改变加载路径)
 - torch + numpy + cv2 + scipy
 - 推理前向**不需要**编译 MSDA (使用纯 PyTorch 回退); 仅训练反向才需要
